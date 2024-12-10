@@ -1658,6 +1658,49 @@ footer {
             margin: 10px 0;
         }
     }
+
+    /* Modal */
+
+    #modal {
+            .form-container {
+                width: 350px;
+                padding: 20px 0;
+
+                h3 {
+                    margin: 10px 0;
+                }
+
+                h2 {
+                    font-size: 30px;
+                }
+            }
+    
+        form {
+            flex-direction: column;
+            align-items: center;
+            width: 270px;
+        }
+    
+        .form-group {
+            flex-direction: column;
+            width: 280px;
+            align-items: center;
+        }
+    
+        input {
+            width: 280px;
+            height: 40px;
+        }
+    
+        textarea {
+            width: 280px;
+            height: 70px;
+        }
+
+        button {
+            width: 200px;
+        }
+    }
 }
 
 @media screen and (max-width: 400px) {
