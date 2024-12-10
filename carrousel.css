@@ -69,3 +69,15 @@
   cursor: pointer;
   padding: 10px;
 }
+
+@media screen and (max-width: 768px) {
+    .slide {
+      min-width: 33.33%;
+    }
+}
+
+@media screen and (max-width: 430px) {
+  .slide {
+    min-width: 100%;
+  }
+}

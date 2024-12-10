@@ -16,11 +16,11 @@
 </head>
 <body>
     <div class="nav-top">
-        <div class="ancho">
+        <div class="ancho nav-top-responsive">
             <div class="information-contact">
                 <h3 class="text-top-bar"><i class="fa-solid fa-location-dot"></i> 770 East Linden Street New York</h3>
-            <h3 class="text-top-bar"><i class="fa-regular fa-envelope"></i> info@example.com</h3>
-            <h3 class="text-top-bar"><i class="fa-solid fa-mobile-screen-button"></i> +707 355-633-755</h3>
+                <h3 class="text-top-bar"><i class="fa-regular fa-envelope"></i> info@example.com</h3>
+                <h3 class="text-top-bar"><i class="fa-solid fa-mobile-screen-button"></i> +707 355-633-755</h3>
             </div>
             <div class="social-media-top">
                 <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
@@ -32,28 +32,28 @@
     </div>
     <header>
         <div class="ancho">
-            <figure>
+            <figure class="logo-responsive">
                 <img src="images/logo-black.png" alt="">
             </figure>
-            <nav>
-                <ul>
+            <nav id="menu">
+                <ul id="contenedor_menu">
                     <li>
-                        <a href="#">Home <i class="fa-solid fa-angle-down"></i></a>
+                        <a class="" href="#">Home <i class="fa-solid fa-angle-down"></i></a>
                         <ul class="dropdown">
                             <li><a href="#">Home Page 1</a></li>
                             <li><a href="#">Home Page 2</a></li>
                         </ul>
                     </li>
-                    <li><a href="#">About</a></li>
+                    <li><a class="" href="#">About</a></li>
                     <li>
-                        <a href="#">Services <i class="fa-solid fa-angle-down"></i></a>
+                        <a class="" href="#">Services <i class="fa-solid fa-angle-down"></i></a>
                         <ul class="dropdown">
                             <li><a href="#">Service 1</a></li>
                             <li><a href="#">Service 2</a></li>
                         </ul>
                     </li>
                     <li>
-                        <a href="#">Pages <i class="fa-solid fa-angle-down"></i></a>
+                        <a class="" href="#">Pages <i class="fa-solid fa-angle-down"></i></a>
                         <ul class="dropdown">
                             <li><a href="#">About</a></li>
                             <li><a href="#">Dentist</a></li>
@@ -77,7 +77,10 @@
                     <li><a href="#">Contact</a></li>
                 </ul>
             </nav>
-            <a class="button abrirmodal" href="#">Book Appointment</a>
+            <a class="button button3 abrirmodal" href="#">Book Appointment</a>
+            <div class="menu-sandwich" id="icono_menu">
+                <i class="fas fa-bars"></i>
+            </div>
         </div>
     </header>
     <section class="slider-container">
@@ -364,8 +367,6 @@
                     </div>
                     <img id="fotogal" class="imgscale" src="images/gallery-3.jpg" />
                 </a>
-            </div>
-            <div class="gallery-container">
                 <a href="images/gallery-4.jpg" data-fancybox="gallery" data-caption="Caption #4">
                     <div class="gallery-hover-img">
                         <i class="fa-regular fa-images"></i>
@@ -758,6 +759,16 @@
         $("#cerrarmodal, #fondomodal").click(function () {
             $("#fondomodal, #modal").fadeOut();
         });
+        });
+
+        // abrir menu
+        $("#icono_menu").click(function () {
+            $("#contenedor_menu").toggleClass('open');
+        });
+
+        // despues de click menu cierra menu
+        $(".btn_ancla").click(function () {
+            $("#contenedor_menu").toggleClass("open");
         });
     </script>
 </body>
