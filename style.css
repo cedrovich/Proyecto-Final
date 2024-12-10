@@ -1722,6 +1722,10 @@ footer {
         width: 400px;
         align-items: center;
     }
+
+    .article-section-4 {
+        padding: 0;
+    }
 }
 
 
